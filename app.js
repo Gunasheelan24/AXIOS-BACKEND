@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const { post, get, remove, edit } = require("./controller/user");
 
 app.use(express.json());
-
+app.use(express.static("dist"));
 app.post("/api/v1", post);
 app.get("/api/v1", get);
 app.delete("/api/v1/:Id", remove);
